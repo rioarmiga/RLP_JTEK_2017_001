@@ -47,7 +47,7 @@
 	<div class="container">
     
     	<div class="page-header">
-    	<h2>Selamat Datang</h2>
+    	<h2>Selamat Datang di V-Mart</h2>
     	</div>
         
         <div class="row">
