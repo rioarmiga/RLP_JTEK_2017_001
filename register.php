@@ -87,7 +87,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Coding Cage - Login & Registration System</title>
+<title>V-Mart</title>
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -101,7 +101,7 @@
     	<div class="col-md-12">
         
         	<div class="form-group">
-            	<h2 class="">Sign Up.</h2>
+            	<h2 class="">Daftar.</h2>
             </div>
         
         	<div class="form-group">
@@ -150,7 +150,7 @@
             </div>
             
             <div class="form-group">
-            	<button type="submit" class="btn btn-block btn-primary" name="btn-signup">Sign Up</button>
+            	<button type="submit" class="btn btn-block btn-primary" name="btn-signup">Daftar</button>
             </div>
             
             <div class="form-group">
@@ -158,7 +158,7 @@
             </div>
             
             <div class="form-group">
-            	<a href="index.php">Sign in Here...</a>
+            	<a href="index.php">Sudah Punya Akun? Masuk.</a>
             </div>
         
         </div>
