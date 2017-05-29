@@ -74,7 +74,7 @@
     	<div class="col-md-12">
         
         	<div class="form-group">
-            	<h2 class="">Masuk.</h2>
+            	<h2 class="">Masuk</h2>
             </div>
         
         	<div class="form-group">
@@ -123,7 +123,8 @@
             </div>
             
             <div class="form-group">
-            	<a href="register.php">Belum Punya Akun? Daftar.</a>
+            	<a href="register.php">Belum Punya Akun? Daftar.</a><br>
+				<a href="index.php">Beranda</a>
             </div>
         
         </div>

@@ -101,7 +101,7 @@
     	<div class="col-md-12">
         
         	<div class="form-group">
-            	<h2 class="">Daftar.</h2>
+            	<h2 class="">Daftar</h2>
             </div>
         
         	<div class="form-group">
@@ -158,7 +158,8 @@
             </div>
             
             <div class="form-group">
-            	<a href="index.php">Sudah Punya Akun? Masuk.</a>
+            	<a href="login.php">Sudah Punya Akun? Masuk.</a><br>
+				<a href="index.php">Beranda</a>
             </div>
         
         </div>
