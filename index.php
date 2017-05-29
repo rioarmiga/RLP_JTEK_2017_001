@@ -34,7 +34,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 			  <span class="glyphicon glyphicon-user"></span>&nbsp;Hi' <?php echo $userRow['userEmail']; ?>&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="login.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Login</a></li>
+                <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Masuk</a></li><br>
+				<li><a href="register.php"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Daftar</a></li>
               </ul>
             </li>
           </ul>
