@@ -27,7 +27,7 @@ if (post_password_required()) {
 		?>
 		<div class="widget sidebar-widget">
 			<div class="widget-title">
-				<h4><?php _e('Details', 'makery'); ?></h4>
+				<h4><?php _e('Detail', 'makery'); ?></h4>
 			</div>
 			<div class="widget-content">
 				<div class="item-attributes">
@@ -38,7 +38,7 @@ if (post_password_required()) {
 							$show=true;
 							?>
 							<li class="clearfix">
-								<div class="halfcol left"><?php _e('Weight', 'makery'); ?></div>
+								<div class="halfcol left"><?php _e('Berat', 'makery'); ?></div>
 								<div class="halfcol right"><?php echo $product->get_weight().' '.esc_attr(get_option('woocommerce_weight_unit')); ?></div>
 							</li>
 							<?php
@@ -47,7 +47,7 @@ if (post_password_required()) {
 							$show=true;
 							?>
 							<li class="clearfix">
-								<div class="halfcol left"><?php _e('Dimensions', 'makery'); ?></div>
+								<div class="halfcol left"><?php _e('Ukuran', 'makery'); ?></div>
 								<div class="halfcol right"><?php echo $product->get_dimensions(); ?></div>
 							</li>
 							<?php
@@ -105,6 +105,6 @@ if (post_password_required()) {
 </div>
 <?php do_action('woocommerce_after_single_product'); ?>
 <?php } else { ?>
-<h3><?php _e('This product is hidden because of the membership limit.','makery'); ?></h3>
-<p><?php _e('Sorry, it is hidden because of the membership limit, upgrade or try removing a few products.','makery'); ?></p>
+<h3><?php _e('Produk Ini Disembunyikan Karena Batas Member.','makery'); ?></h3>
+<p><?php _e('Maaf, Ini Disembunyikan Karena Batas Membe, Tingkatkan Atau Coba Hapus Beberapa Produk.','makery'); ?></p>
 <?php } ?>
