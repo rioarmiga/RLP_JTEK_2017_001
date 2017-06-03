@@ -11,9 +11,9 @@ if(!defined('ABSPATH')) {
 	<th>
 	<?php
 	if($show_package_details) {
-		printf(__('Shipping #%d', 'makery'), $index+1);
+		printf(__('Pengiriman #%d', 'makery'), $index+1);
 	} else {
-		_e('Shipping and Handling', 'makery');
+		_e('pengiriman dan Penanganan', 'makery');
 	}
 	?>
 	</th>
@@ -40,7 +40,7 @@ if(!defined('ABSPATH')) {
 				</ul>
 			<?php endif; ?>
 		<?php elseif (!WC()->customer->has_calculated_shipping()): ?>
-			<?php echo wpautop(__('Shipping costs will be calculated once you have provided your address.', 'makery')); ?>
+			<?php echo wpautop(__('Biaya pengirman akan dihitung seteleh anda mengisi alamat anda.', 'makery')); ?>
 		<?php else: ?>
 			<?php echo apply_filters(is_cart()?'woocommerce_cart_no_shipping_available_html':'woocommerce_no_shipping_available_html', wpautop(__('There are no shipping methods available. Please double check your address, or contact us if you need any help.', 'makery'))); ?>
 		<?php endif; ?>
@@ -52,7 +52,7 @@ if(!defined('ABSPATH')) {
 				}
 			}
 
-			echo '<p class="woocommerce-shipping-contents"><small>'.__('Shipping', 'makery').': '.implode(', ', $product_names).'</small></p>';
+			echo '<p class="woocommerce-shipping-contents"><small>'.__('Pengiriman', 'makery').': '.implode(', ', $product_names).'</small></p>';
 			?>
 		<?php endif; ?>
 	</td>

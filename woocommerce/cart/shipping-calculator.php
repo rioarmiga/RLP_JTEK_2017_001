@@ -13,13 +13,13 @@ if(get_option('woocommerce_enable_shipping_calc')=== 'no' || ! WC()->cart->needs
 ?>
 <?php do_action('woocommerce_before_shipping_calculator'); ?>
 <form class="woocommerce-shipping-calculator site-form" action="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" method="post">
-	<a href="#" class="shipping-calculator-button element-button secondary"><?php _e('Calculate Shipping', 'makery'); ?></a>
+	<a href="#" class="shipping-calculator-button element-button secondary"><?php _e('Hitung Pengiriman', 'makery'); ?></a>
 	<div class="clear"></div>
 	<section class="shipping-calculator-form">
 		<div class="element-select">
 			<span></span>
 			<select name="calc_shipping_country" id="calc_shipping_country" class="country_to_state" rel="calc_shipping_state">
-				<option value=""><?php _e('Select a country&hellip;', 'makery'); ?></option>
+				<option value=""><?php _e('Pilih Negara&hellip;', 'makery'); ?></option>
 				<?php
 				foreach(WC()->countries->get_shipping_countries()as $key => $value)
 					echo '<option value="'.esc_attr($key). '"'.selected(WC()->customer->get_shipping_country(), esc_attr($key), false). '>'.esc_html($value). '</option>';
@@ -34,11 +34,11 @@ if(get_option('woocommerce_enable_shipping_calc')=== 'no' || ! WC()->cart->needs
 		if(is_array($states) && empty($states)){
 		?>
 		<div class="field-wrap">
-			<input type="hidden" name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php _e('State / county', 'makery'); ?>" />
+			<input type="hidden" name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php _e('Provinsi', 'makery'); ?>" />
 		</div>
 		<?php } else if(is_array($states)){ ?>
 		<div class="field-wrap">
-			<select name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php _e('State / county', 'makery'); ?>">
+			<select name="calc_shipping_state" id="calc_shipping_state" placeholder="<?php _e('Provinsi', 'makery'); ?>">
 				<option value=""><?php _e('Select a state&hellip;', 'makery'); ?></option>
 				<?php
 				foreach($states as $ckey => $cvalue)
@@ -48,20 +48,20 @@ if(get_option('woocommerce_enable_shipping_calc')=== 'no' || ! WC()->cart->needs
 		</div>
 		<?php } else { ?>
 		<div class="field-wrap">
-			<input type="text" class="input-text" value="<?php echo esc_attr($current_r); ?>" placeholder="<?php _e('State / county', 'makery'); ?>" name="calc_shipping_state" id="calc_shipping_state" />
+			<input type="text" class="input-text" value="<?php echo esc_attr($current_r); ?>" placeholder="<?php _e('Provinsi', 'makery'); ?>" name="calc_shipping_state" id="calc_shipping_state" />
 		</div>
 		<?php }	?>		
 		<?php if(apply_filters('woocommerce_shipping_calculator_enable_city', false)): ?>
 		<div class="field-wrap">
-			<input type="text" class="input-text" value="<?php echo esc_attr(WC()->customer->get_shipping_city()); ?>" placeholder="<?php _e('City', 'makery'); ?>" name="calc_shipping_city" id="calc_shipping_city" />
+			<input type="text" class="input-text" value="<?php echo esc_attr(WC()->customer->get_shipping_city()); ?>" placeholder="<?php _e('Kota', 'makery'); ?>" name="calc_shipping_city" id="calc_shipping_city" />
 		</div>
 		<?php endif; ?>
 		<?php if(apply_filters('woocommerce_shipping_calculator_enable_postcode', true)): ?>
 		<div class="field-wrap">
-			<input type="text" class="input-text" value="<?php echo esc_attr(WC()->customer->get_shipping_postcode()); ?>" placeholder="<?php _e('Postcode / Zip', 'makery'); ?>" name="calc_shipping_postcode" id="calc_shipping_postcode" />
+			<input type="text" class="input-text" value="<?php echo esc_attr(WC()->customer->get_shipping_postcode()); ?>" placeholder="<?php _e('Kode Pos', 'makery'); ?>" name="calc_shipping_postcode" id="calc_shipping_postcode" />
 		</div>
 		<?php endif; ?>
-		<button type="submit" name="calc_shipping" value="1" class="button"><?php _e('Update Totals', 'makery'); ?></button>
+		<button type="submit" name="calc_shipping" value="1" class="button"><?php _e('Perbaharui Total', 'makery'); ?></button>
 		<?php wp_nonce_field('woocommerce-cart'); ?>
 	</section>
 </form>

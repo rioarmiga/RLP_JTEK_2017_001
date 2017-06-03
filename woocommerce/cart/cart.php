@@ -19,7 +19,7 @@ do_action('woocommerce_before_cart');
 		$title=get_the_title(ThemexUser::getShop(ThemexWoo::getUser()));
 		?>
 		<div class="element-title indented">
-			<h2><?php echo __('Order from', 'makery').' '.$title; ?></h2>
+			<h2><?php echo __('Orderan Dari', 'makery').' '.$title; ?></h2>
 		</div>
 		<?php } ?>
 		<div class="woocommerce">
@@ -111,11 +111,11 @@ do_action('woocommerce_before_cart');
 							<td colspan="6" class="actions">
 								<?php if(WC()->cart->coupons_enabled()){ ?>
 									<div class="coupon">
-										<label for="coupon_code"><?php _e('Coupon', 'makery'); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e('Coupon Code', 'makery'); ?>" /> <input type="submit" class="button secondary" name="apply_coupon" value="<?php _e('Apply', 'makery'); ?>" />
+										<label for="coupon_code"><?php _e('Kupon', 'makery'); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e('Coupon Code', 'makery'); ?>" /> <input type="submit" class="button secondary" name="apply_coupon" value="<?php _e('Apply', 'makery'); ?>" />
 										<?php do_action('woocommerce_cart_coupon'); ?>
 									</div>
 								<?php } ?>
-								<input type="submit" class="button secondary" name="update_cart" value="<?php _e('Update', 'makery'); ?>" />
+								<input type="submit" class="button secondary" name="update_cart" value="<?php _e('Perbaharui', 'makery'); ?>" />
 								<?php do_action('woocommerce_proceed_to_checkout'); ?>
 								<?php wp_nonce_field('woocommerce-cart'); ?>
 							</td>
@@ -131,16 +131,16 @@ do_action('woocommerce_before_cart');
 		$title=get_the_title(ThemexUser::getShop($author));
 		?>
 		<div class="element-title indented">
-			<h2><?php echo __('Order from', 'makery').' '.$title; ?></h2>
+			<h2><?php echo __('Orderan dari', 'makery').' '.$title; ?></h2>
 		</div>
 		<form action="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" method="POST">
 			<table class="cart" cellspacing="0">
 				<thead>
 					<tr>					
 						<th class="product-thumbnail">&nbsp;</th>
-						<th class="product-name"><?php _e('Product', 'makery'); ?></th>
-						<th class="product-price"><?php _e('Price', 'makery'); ?></th>
-						<th class="product-quantity"><?php _e('Quantity', 'makery'); ?></th>
+						<th class="product-name"><?php _e('Produk', 'makery'); ?></th>
+						<th class="product-price"><?php _e('Harga', 'makery'); ?></th>
+						<th class="product-quantity"><?php _e('Jumalh', 'makery'); ?></th>
 						<th class="product-subtotal"><?php _e('Total', 'makery'); ?></th>
 					</tr>
 				</thead>
@@ -174,7 +174,7 @@ do_action('woocommerce_before_cart');
 								echo WC()->cart->get_item_data($cart_item);
 
 								if($_product->backorders_require_notification()&& $_product->is_on_backorder($cart_item['quantity']))
-									echo '<p class="backorder_notification">'.__('Available on backorder', 'makery').'</p>';
+									echo '<p class="backorder_notification">'.__('Tersedia di backorder', 'makery').'</p>';
 								?>
 							</td>
 							<td class="product-price">
@@ -205,8 +205,8 @@ do_action('woocommerce_before_cart');
 					?>
 					<tr>
 						<td colspan="6" class="actions">
-							<input type="submit" class="button secondary" name="remove" value="<?php _e('Remove', 'makery'); ?>" />
-							<input type="submit" class="checkout-button button" name="add" value="<?php _e('Make Primary', 'makery'); ?>" />
+							<input type="submit" class="button secondary" name="remove" value="<?php _e('Hapus', 'makery'); ?>" />
+							<input type="submit" class="checkout-button button" name="add" value="<?php _e('Buat Prioritas', 'makery'); ?>" />
 						</td>
 					</tr>
 				</tbody>

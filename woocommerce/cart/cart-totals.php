@@ -10,11 +10,11 @@ if(!defined('ABSPATH')) {
 <div class="cart_totals <?php if(WC()->customer->has_calculated_shipping())echo 'calculated_shipping'; ?>">
 	<?php do_action('woocommerce_before_cart_totals'); ?>
 	<div class="element-title indented">
-		<h2><?php _e('Cart Totals', 'makery'); ?></h2>
+		<h2><?php _e('Total Keranjang', 'makery'); ?></h2>
 	</div>
 	<table cellspacing="0">
 		<tr class="cart-subtotal">
-			<th><?php _e('Cart Subtotal', 'makery'); ?></th>
+			<th><?php _e('Subtotal Keranjang', 'makery'); ?></th>
 			<td><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 		<?php foreach(WC()->cart->get_coupons('cart')as $code => $coupon): ?>
@@ -57,7 +57,7 @@ if(!defined('ABSPATH')) {
 		<?php endforeach; ?>
 		<?php do_action('woocommerce_cart_totals_before_order_total'); ?>
 		<tr class="order-total">
-			<th><?php _e('Order Total', 'makery'); ?></th>
+			<th><?php _e('Total Orderan', 'makery'); ?></th>
 			<td><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 		<?php do_action('woocommerce_cart_totals_after_order_total'); ?>
@@ -66,10 +66,10 @@ if(!defined('ABSPATH')) {
 	<p class="calculated_shipping_note">
 		<?php
 		$estimated_text=WC()->customer->is_customer_outside_base()&& ! WC()->customer->has_calculated_shipping()
-			? sprintf(' '.__('(taxes estimated for %s)', 'makery'), WC()->countries->estimated_for_prefix(). __(WC()->countries->countries[ WC()->countries->get_base_country()], 'makery'))
+			? sprintf(' '.__('(Pajak)', 'makery'), WC()->countries->estimated_for_prefix(). __(WC()->countries->countries[ WC()->countries->get_base_country()], 'makery'))
 			: '';
 
-		printf(__('Note: Shipping and taxes are estimated%s and will be updated during checkout based on your billing and shipping information.', 'makery'), $estimated_text);
+		printf(__('Note: Pengiriman dan pajak akan di perbaharui selama chekout berdasarkan tagihan dan infromasi pengiriman anda.', 'makery'), $estimated_text);
 		?>
 	</p>
 	<?php endif; ?>
