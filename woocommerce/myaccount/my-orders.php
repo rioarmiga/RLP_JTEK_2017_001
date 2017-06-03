@@ -16,16 +16,16 @@ $customer_orders=get_posts(apply_filters( 'woocommerce_my_account_my_orders_quer
 )));
 ?>
 <div class="element-title indented">
-	<h1><?php echo apply_filters('woocommerce_my_account_my_orders_title', __('My Orders', 'makery')); ?></h1>
+	<h1><?php echo apply_filters('woocommerce_my_account_my_orders_title', __('Orderan', 'makery')); ?></h1>
 </div>
 <?php if(empty($customer_orders)) { ?>
-<span class="secondary"><?php _e('No orders made yet.', 'makery'); ?></span>
+<span class="secondary"><?php _e('Belum Ada Orderan.', 'makery'); ?></span>
 <?php } else { ?>
 <table class="shop_table my_account_orders">
 	<thead>
 		<tr>
 			<th class="order-number"><span class="nobr">&#8470;</span></th>
-			<th class="order-date"><span class="nobr"><?php _e( 'Date', 'makery' ); ?></span></th>
+			<th class="order-date"><span class="nobr"><?php _e( 'Tanggal', 'makery' ); ?></span></th>
 			<th class="order-status"><span class="nobr"><?php _e( 'Status', 'makery' ); ?></span></th>
 			<th class="order-total"><span class="nobr"><?php _e( 'Total', 'makery' ); ?></span></th>
 			<th class="order-actions">&nbsp;</th>

@@ -21,7 +21,7 @@ if(!$product->is_in_stock()) {
 }
 	
 if($product->is_in_stock()) {
-?>
+?>ma
 <?php do_action('woocommerce_before_add_to_cart_form'); ?>
 <div class="item-options clearfix">
 	<?php woocommerce_template_single_price(); ?>
@@ -44,10 +44,10 @@ if($product->is_in_stock()) {
 	<?php if(!ThemexCore::checkOption('product_favorites')) { ?>
 	<form class="element-form" method="POST" action="<?php echo AJAX_URL; ?>">
 		<?php if(in_array($product->id, ThemexUser::$data['current']['favorites'])) { ?>
-		<a href="#" title="<?php _e('Remove from Favorites', 'makery'); ?>" class="element-button element-submit secondary active" data-title="<?php _e('Add to Favorites', 'makery'); ?>"><span class="fa fa-heart"></span></a>
+		<a href="#" title="<?php _e('Hapus Dari favorit', 'makery'); ?>" class="element-button element-submit secondary active" data-title="<?php _e('Add to Favorites', 'makery'); ?>"><span class="fa fa-heart"></span></a>
 		<input type="hidden" name="user_action" class="toggle" value="remove_relation" data-value="add_relation" />
 		<?php } else { ?>
-		<a href="#" title="<?php _e('Add to Favorites', 'makery'); ?>" class="element-button element-submit secondary" data-title="<?php _e('Remove from Favorites', 'makery'); ?>"><span class="fa fa-heart"></span></a>
+		<a href="#" title="<?php _e('Tambahkan Ke favorit', 'makery'); ?>" class="element-button element-submit secondary" data-title="<?php _e('Remove from Favorites', 'makery'); ?>"><span class="fa fa-heart"></span></a>
 		<input type="hidden" name="user_action" class="toggle" value="add_relation" data-value="remove_relation" />
 		<?php } ?>
 		<input type="hidden" name="relation_type" value="product" />
@@ -56,14 +56,14 @@ if($product->is_in_stock()) {
 	</form>
 	<?php } ?>
 	<?php if(!ThemexCore::checkOption('product_questions')) { ?>
-	<a href="#contact_form_<?php echo $product->id; ?>" class="element-button element-colorbox square secondary" title="<?php _e('Ask a Question', 'makery'); ?>"><span class="fa fa-comment"></span></a>
+	<a href="#contact_form_<?php echo $product->id; ?>" class="element-button element-colorbox square secondary" title="<?php _e('Beri Pertanyaan', 'makery'); ?>"><span class="fa fa-comment"></span></a>
 	<?php } ?>
 	<?php } else { ?>
 	<?php if(!ThemexCore::checkOption('product_favorites')) { ?>
-	<a href="<?php echo ThemexCore::getURL('register'); ?>" title="<?php _e('Add to Favorites', 'makery'); ?>" class="element-button secondary"><span class="fa fa-heart"></span></a>
+	<a href="<?php echo ThemexCore::getURL('register'); ?>" title="<?php _e('Tambahkan Ke Favorit', 'makery'); ?>" class="element-button secondary"><span class="fa fa-heart"></span></a>
 	<?php } ?>
 	<?php if(!ThemexCore::checkOption('product_questions')) { ?>
-	<a href="<?php echo ThemexCore::getURL('register'); ?>" class="element-button square secondary" title="<?php _e('Ask a Question', 'makery'); ?>"><span class="fa fa-comment"></span></a>
+	<a href="<?php echo ThemexCore::getURL('register'); ?>" class="element-button square secondary" title="<?php _e('Beri Pertanyaan', 'makery'); ?>"><span class="fa fa-comment"></span></a>
 	<?php } ?>
 	<?php } ?>
 	<div class="site-popups hidden">
@@ -75,9 +75,9 @@ if($product->is_in_stock()) {
 						<input type="text" name="email" readonly="readonly" value="<?php echo esc_attr(ThemexUser::$data['current']['email']); ?>" />
 					</div>
 					<div class="field-wrap">
-						<textarea name="question" cols="30" rows="5" placeholder="<?php _e('Question', 'makery'); ?>"></textarea>
+						<textarea name="question" cols="30" rows="5" placeholder="<?php _e('Pertanyaan', 'makery'); ?>"></textarea>
 					</div>
-					<a href="#" class="element-button element-submit primary"><?php _e('Send Question', 'makery'); ?></a>				
+					<a href="#" class="element-button element-submit primary"><?php _e('Kirim Pertanyaan', 'makery'); ?></a>				
 					<input type="hidden" name="product_id" value="<?php echo $product->id; ?>" />
 					<input type="hidden" name="shop_action" value="submit_question" />
 					<input type="hidden" name="action" class="action" value="<?php echo THEMEX_PREFIX; ?>update_shop" />

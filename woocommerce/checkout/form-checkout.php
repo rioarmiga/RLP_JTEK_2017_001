@@ -11,7 +11,7 @@ wc_print_notices();
 do_action('woocommerce_before_checkout_form', $checkout);
 
 if(! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_user_logged_in()){
-	echo apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', 'makery'));
+	echo apply_filters('woocommerce_checkout_must_be_logged_in_message', __('Anda Harus Masuk Untuk Melakukan Checkout.', 'makery'));
 	return;
 }
 

@@ -13,13 +13,13 @@ $order=wc_get_order($order_id);
 <table class="profile-fields">
 	<tbody>
 		<tr>
-			<th><?php _e('Number', 'makery'); ?></th>
+			<th><?php _e('Nomor', 'makery'); ?></th>
 			<td>
 				<?php echo $order->get_order_number(); ?>
 			</td>
 		</tr>
 		<tr>
-			<th><?php _e('Date', 'makery'); ?></th>
+			<th><?php _e('Tanggal', 'makery'); ?></th>
 			<td>
 				<?php echo date_i18n(get_option('date_format'), strtotime($order->order_date)); ?>
 			</td>
@@ -36,7 +36,7 @@ $order=wc_get_order($order_id);
 			if(!empty($shop)) {
 			?>
 			<tr>
-				<th><?php _e('Shop', 'makery'); ?></th>
+				<th><?php _e('Toko', 'makery'); ?></th>
 				<td>
 					<a href="<?php echo get_permalink($shop); ?>"><?php echo get_the_title($shop); ?></a>
 				</td>
@@ -50,7 +50,7 @@ $order=wc_get_order($order_id);
 <table class="profile-table shop_table order_details">
 	<thead>
 		<tr>
-			<th class="product-name"><?php _e('Product', 'makery' ); ?></th>
+			<th class="product-name"><?php _e('Produk', 'makery' ); ?></th>
 			<th class="product-total"><?php _e('Total', 'makery' ); ?></th>
 		</tr>
 	</thead>
@@ -125,22 +125,22 @@ $order=wc_get_order($order_id);
 <table class="profile-table">
 	<tbody>
 		<tr>
-			<th><?php _e('Customer Details', 'makery'); ?></th>
+			<th><?php _e('Detail Pelanggan', 'makery'); ?></th>
 			<td>
 				<?php if(!empty($order->billing_email)) { ?>
 				<strong><?php _e('Email:', 'makery'); ?></strong>&nbsp;<?php echo $order->billing_email; ?><br />
 				<?php } ?>
 				<?php if(!empty($order->billing_phone)) { ?>
-				<strong><?php _e('Phone:', 'makery'); ?></strong>&nbsp;<?php echo $order->billing_phone; ?>
+				<strong><?php _e('No. HP:', 'makery'); ?></strong>&nbsp;<?php echo $order->billing_phone; ?>
 				<?php } ?>
 				<?php do_action('woocommerce_order_details_after_customer_details', $order); ?>
 			</td>
 		</tr>
 		<tr>
 			<?php if(!wc_ship_to_billing_address_only() && $order->needs_shipping_address() && get_option('woocommerce_calc_shipping')!=='no' && $order->get_formatted_shipping_address()!=$order->get_formatted_billing_address()){ ?>
-			<th><?php _e('Billing Address', 'makery'); ?></th>
+			<th><?php _e('Alamat Tagihan', 'makery'); ?></th>
 			<?php } else { ?>				
-			<th><?php _e('Customer Address', 'makery'); ?></th>
+			<th><?php _e('Alamat Pelanggan', 'makery'); ?></th>
 			<?php } ?>					
 			<td>
 				<address><?php echo $order->get_formatted_billing_address(); ?></address>
@@ -148,7 +148,7 @@ $order=wc_get_order($order_id);
 		</tr>
 		<?php if(!wc_ship_to_billing_address_only() && $order->needs_shipping_address() && get_option('woocommerce_calc_shipping')!=='no' && $order->get_formatted_shipping_address()!=$order->get_formatted_billing_address()){ ?>
 		<tr>
-			<th><?php _e('Shipping Address', 'makery'); ?></th>
+			<th><?php _e('Alamat Pengiriman', 'makery'); ?></th>
 			<td>
 				<address><?php echo $order->get_formatted_shipping_address(); ?></address>
 			</td>
@@ -156,7 +156,7 @@ $order=wc_get_order($order_id);
 		<?php } ?>
 		<?php if(!empty($order->post->post_excerpt)) { ?>
 		<tr>
-			<th><?php _e('Customer Note', 'makery'); ?></th>
+			<th><?php _e('Catatan Pelanggan', 'makery'); ?></th>
 			<td>
 				<?php echo nl2br(esc_html($order->post->post_excerpt)); ?>
 			</td>
@@ -167,7 +167,7 @@ $order=wc_get_order($order_id);
 		if(!empty($note)) { 
 		?>
 		<tr>
-			<th><?php _e('Order Note', 'makery'); ?></th>
+			<th><?php _e('Catatan Orderan', 'makery'); ?></th>
 			<td>
 				<?php echo nl2br(esc_html($note)); ?>
 			</td>

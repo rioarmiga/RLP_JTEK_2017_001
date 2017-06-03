@@ -10,7 +10,7 @@ if(!defined('ABSPATH')) {
 <?php get_sidebar('profile-left'); ?>
 <div class="column fivecol">
 	<div class="element-title">
-		<h1><?php _e('View Order', 'makery'); ?></h1>
+		<h1><?php _e('Lihat Orderan', 'makery'); ?></h1>
 	</div>
 	<?php wc_print_notices(); ?>
 	<?php do_action('woocommerce_view_order', $order_id); ?>

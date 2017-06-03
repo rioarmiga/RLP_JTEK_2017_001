@@ -19,7 +19,7 @@ if(!defined('ABSPATH')) {
 	?>
 	<div id="ship-to-different-address" class="form-row last">
 		<input id="ship-to-different-address-checkbox" class="input-checkbox" type="checkbox" name="ship_to_different_address" value="1" />
-		<label for="ship-to-different-address-checkbox" class="checkbox"><?php _e('Ship to a different address?', 'makery'); ?></label>			
+		<label for="ship-to-different-address-checkbox" class="checkbox"><?php _e('Kirim Ke Alamat Berbeda?', 'makery'); ?></label>			
 	</div>
 	<div class="shipping_address">
 		<?php do_action('woocommerce_before_checkout_shipping_form', $checkout); ?>

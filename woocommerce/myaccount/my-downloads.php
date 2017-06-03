@@ -11,7 +11,7 @@ if($downloads=WC()->customer->get_downloadable_products()) {
 ?>
 	<?php do_action( 'woocommerce_before_available_downloads' ); ?>
 	<div class="element-title">
-		<h1><?php echo apply_filters('woocommerce_my_account_my_downloads_title', __('My Downloads', 'makery')); ?></h1>
+		<h1><?php echo apply_filters('woocommerce_my_account_my_downloads_title', __('Unduhan Saya', 'makery')); ?></h1>
 	</div>	
 	<ul class="digital-downloads">
 		<?php foreach($downloads as $download) { ?>
