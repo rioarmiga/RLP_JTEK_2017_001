@@ -80,10 +80,6 @@
 				<nav class="header-menu element-menu left">
 					<?php wp_nav_menu(array('theme_location' => 'main_menu','container_class' => 'menu')); ?>
 				</nav>
-				<div class="select-menu element-select redirect medium">
-					<span></span>
-					<?php ThemexInterface::renderDropdownMenu('main_menu'); ?>
-				</div>
 				<!-- /menu -->
 				<?php if(ThemexWoo::isActive()) { ?>
 				<div class="header-cart right">
